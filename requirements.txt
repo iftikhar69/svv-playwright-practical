@@ -1,6 +1,6 @@
 # Pinned to the exact versions this project was verified with.
-# Python 3.10 or newer is required (pytest 9 and pytest-playwright 0.10 need it).
-# Python 3.12 is the recommended version for this class.
+# Python 3.10 or newer is required. Python 3.12 is the recommended version.
+# Playwright 1.64 supports Ubuntu 24.04 and Ubuntu 26.04. Version 1.56 does not.
 pytest==9.1.1
 pytest-playwright==0.10.0
-playwright==1.56.0
+playwright==1.64.0
