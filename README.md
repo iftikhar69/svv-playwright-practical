@@ -123,6 +123,8 @@ python -m pytest
 
 You should see `27 passed`.
 
+Ubuntu 26.04 needs Playwright 1.64, which is already pinned in `requirements.txt`. Version 1.56 stops with `Playwright does not support chromium on ubuntu26.04-x64` and never downloads the browser. If you still see that error, run `git pull`, then run the two install commands again.
+
 ```bash
 python serve.py
 ```
@@ -189,6 +191,7 @@ Event ids: `python-workshop`, `hackathon`, `robotics-night`.
 | Running scripts is disabled | `Set-ExecutionPolicy -Scope CurrentUser RemoteSigned` |
 | `No module named pytest` | Activate `.venv` again. The prompt must start with `(.venv)`. |
 | Playwright cannot find the browser | Windows: `python -m playwright install chromium`. Ubuntu: `python -m playwright install --with-deps chromium` |
+| `does not support chromium on ubuntu26.04` | Pull the latest `main` so `requirements.txt` says `playwright==1.64.0`, then run `python -m pip install -r requirements.txt` and `python -m playwright install --with-deps chromium` |
 | Page does not load | Use <http://127.0.0.1:8000>, and leave `python serve.py` running. |
 | `git push` is rejected | You cloned the class repository. Fork it, clone your fork, and push again. |
 | Git asks for a password | In Chrome open <https://github.com/settings/tokens>, create a token, and paste the token. |
